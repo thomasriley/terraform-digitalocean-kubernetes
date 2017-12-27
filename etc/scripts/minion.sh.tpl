@@ -22,6 +22,6 @@ echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
 
 yum install -y kubelet kubeadm kubectl kubernetes-cni
 
-kubeadm join --token ${cluster_token} ${master_ip}:6443
+kubeadm join --discovery-token-unsafe-skip-ca-verification --token ${cluster_token} ${master_ip}:6443
 
 touch /tmp/script_finished

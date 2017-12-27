@@ -27,5 +27,5 @@ variable "ssh_public_key" {
 }
 
 variable "number_of_minions" {
-  default = 1
+  default = 2
 }
